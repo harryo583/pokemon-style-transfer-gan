@@ -14,8 +14,8 @@ pokedex = pd.read_csv(csv_path)
 
 for _, row in pokedex.iterrows():
     pokemon_name = row['Name']
-    pokemon_type = row['Type 1']
-    image_name = f"{pokemon_name}.png"
+    pokemon_type = row['Type 1'].lower()
+    image_name = f"{pokemon_name.lower()}.png"
 
     # Define the source and destination paths for the image
     type_dir = os.path.join(output_dir, pokemon_type)
@@ -29,4 +29,4 @@ for _, row in pokedex.iterrows():
     else:
         print(f"Image not found for Pokémon {pokemon_name}: {image_name}")
 
-print("Images have been sorted into folders by type!")
+print("Images have been sorted by type")
