@@ -5,7 +5,6 @@ import torch.nn as nn
 from networks import ResnetGenerator
 from networks import NLayerDiscriminator
 
-
 class CycleGAN:
     def __init__(self, input_nc, output_nc, device):
         self.device = device

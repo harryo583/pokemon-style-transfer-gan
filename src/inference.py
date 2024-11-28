@@ -27,5 +27,7 @@ def style_transfer(image_path, output_path):
     output_image = ToPILImage()((output_tensor.squeeze(0).cpu() + 1) / 2)  # Denormalize
     output_image.save(output_path)
 
-# Example usage
-style_transfer("/path/to/input_image.png", "/path/to/output_image.png")
+# Call function
+input_image_path = None
+output_image_path = None
+style_transfer(input_image_path, output_image_path)
